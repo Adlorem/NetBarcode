@@ -32,21 +32,6 @@ PM> Install-Package NetBarcode
 > dotnet add package NetBarcode
 ```
 
-## NuGet
-https://www.nuget.org/packages/NetBarcode
-
-## Requirements
-This library uses `System.Drawing.Common` which requires the following installed packages:
-```
-sudo apt install libc6-dev 
-sudo apt install libgdiplus
-```
-Mac
-```
-brew update
-brew install mono-libgdiplus
-```
-
 ## Using
 
 ``` c#
@@ -77,7 +62,6 @@ To manipulate the image
 var image = barcode.GetImage();
 ```
 
-## Version 1.5
 ImageSharp was added in place of System.Drawing due to break of support from .NET 6, more information [click here](https://docs.microsoft.com/en-us/dotnet/core/compatibility/core-libraries/6.0/system-drawing-common-windows-only).
 There is a small compatibility break only if you are manipulating the image with the GetImage method or customizing font and color. In these cases the namespaces have changed to `SixLabors.ImageSharp`.
 
